@@ -90,7 +90,7 @@ video_frame = tk.Frame(root, bg="#1f96f2")
 video_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=200, pady=400)
 
 # Создаем виджет для отображения видео
-video_label = tk.Label(video_frame, bg="#1f96f2")  # Вставьте сюда ваш цвет без альфа-канала
+video_label = tk.Label(video_frame, bg="#1f96f2")  # Добавляю цвет фону
 video_label.pack(fill=tk.BOTH, expand=True)
 
 # Создаем фрейм для информации о человеке
@@ -99,7 +99,7 @@ info_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=100, pady=300)
 
 # Загружаем эмблему
 logo_image = Image.open(r"C:\Users\User\Desktop\neuro\GUI\logo.jpg")  
-logo_image = logo_image.resize((87, 79), Image.LANCZOS)  # Измените размер эмблемы по необходимости
+logo_image = logo_image.resize((87, 79), Image.LANCZOS)  # Можно изменить размер эмблемы
 logo_photo = ImageTk.PhotoImage(logo_image)
 
 # Создаем виджет для отображения информации о человеке
@@ -108,7 +108,7 @@ info_label.pack(fill=tk.BOTH, expand=True)
 
 # Создаем виджет для отображения эмблемы и размещаем его в верхней части фрейма
 logo_label = tk.Label(info_frame, image=logo_photo, bg="#1f96f2")
-logo_label.place(x=810, y=0, anchor="ne")  # Размещаем эмблему в левом верхнем углу
+logo_label.place(x=810, y=0, anchor="ne") # Размещение эмблему в верхнем правом углу
 
 # Привязываем обработчик нажатий клавиш
 root.bind("<KeyPress>", on_key_press)
